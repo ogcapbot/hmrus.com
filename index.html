@@ -3,46 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HMRUS – Firebase Tools</title>
+  <title>HMRUS – Coming Soon</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: #0a0a0a;
+      color: #e6e6e6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      flex-direction: column;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      color: #ffffff;
+      z-index: 2;
     }
+
     p {
       font-size: 1.2rem;
-      margin-top: 0;
+      color: #ccc;
+      margin-top: 1rem;
+      z-index: 2;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #0057ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+
+    .background-lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
     }
-    a.button:hover {
-      background-color: #003ec7;
+
+    .line {
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to right, transparent, #00bfff, transparent);
+      opacity: 0.2;
+      animation: moveLine 5s infinite linear;
+    }
+
+    .line:nth-child(2) {
+      top: 25%;
+      background: linear-gradient(to right, transparent, #ff3c41, transparent);
+      animation-delay: 1s;
+    }
+
+    .line:nth-child(3) {
+      top: 50%;
+      background: linear-gradient(to right, transparent, #aaa, transparent);
+      animation-delay: 2s;
+    }
+
+    .line:nth-child(4) {
+      top: 75%;
+      background: linear-gradient(to right, transparent, #00ffea, transparent);
+      animation-delay: 3s;
+    }
+
+    @keyframes moveLine {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateX(100%);
+        opacity: 0.2;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>HMRUS</h1>
-  <p>Modern tools for Firebase and Google Sheets</p>
-  <a href="https://fs.hmrus.com" class="button" disabled>View Add-on</a>
+  <div class="background-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="content">
+    <h1>HMRUS</h1>
+    <p>Launching Soon</p>
+  </div>
 </body>
 </html>
